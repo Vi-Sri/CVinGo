@@ -22,6 +22,24 @@ func histPlot(values plotter.Values) {
 	}
 }
 
+func boxPlot(values plotter.Values) {
+	p := plot.New()
+	if err != nil {
+		panic(err)
+	}
+	p.Title.Text = "box plot"
+
+	box, err := plotter.NewBoxPlot(vg.Length(15), 0.0, values)
+	if err != nil {
+		panic(err)
+	}
+	p.Add(box)
+
+	if err := p.Save(3*vg.Inch, 3*vg.Inch, "box.png"); err != nil {
+		panic(err)
+	}
+}
+
 func main() {
 		//make data
 		var values plotter.Values
