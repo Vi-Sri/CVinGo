@@ -17,9 +17,8 @@ func main() {
 	}
 	//kernel := gocv.Ones(3,3, gocv.MatTypeCV32FC1)
 	sizes := []int{3, 3}
-	s := gocv.NewScalar(3.0, -1.0, -1.0, -1.0)
+	s := gocv.NewScalar(10.0, -1.0, -1.0, -1.0)
 	kernel := gocv.NewMatWithSizesWithScalar(sizes, gocv.MatTypeCV32FC1, s)
-
 	gocv.Filter2D(img, &result, 3, kernel, image.Pt(-1, -1), 0 ,gocv.BorderDefault)
 	for {
 		window.IMShow(result)

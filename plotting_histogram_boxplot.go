@@ -46,7 +46,7 @@ func main() {
 		for i := 0; i < 1000; i++ {
 			values = append(values, rand.NormFloat64())
 		}
-		//boxPlot(values)
+		boxPlot(values)
 		//barPlot(values[:4])
-		histPlot(values)
+		//histPlot(values)
 }

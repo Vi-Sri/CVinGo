@@ -36,7 +36,6 @@ func main() {
 	// open webcam
 	webcam, err = gocv.VideoCaptureDevice(0)
 
-
 	if err != nil {
 		fmt.Printf("Error opening capture device: \n")
 		return
