@@ -28,6 +28,10 @@ var faceblur bool
 
 func main() {
 	host := "127.0.0.1:3000"
+	if len(os.Args) < 1 {
+		fmt.Println("Faceblur flag needed")
+		return
+	}
 	faceblur, err = strconv.ParseBool(os.Args[1])
 	if err != nil {
 		fmt.Printf("Cant parse faceblur flag")
